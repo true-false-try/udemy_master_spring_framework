@@ -1,11 +1,12 @@
-package com.spring;
+package com.spring.config;
 
+import com.spring.model.Vehicle;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
-public class Vehicle {
-    private String name;
+public class ProjectConfig {
 
     @Bean(name = "audiVehicle")
     Vehicle vehicleOne() {
@@ -13,7 +14,7 @@ public class Vehicle {
         veh.setName("Audi");
         return veh;
     }
-
+    @Primary
     @Bean(value = "hondaVehicle")
     Vehicle vehicleTwo() {
         var veh = new Vehicle();
@@ -26,12 +27,5 @@ public class Vehicle {
         var veh = new Vehicle();
         veh.setName("BMW");
         return veh;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-    public void setName(String name) {
-        this.name = name;
     }
 }
