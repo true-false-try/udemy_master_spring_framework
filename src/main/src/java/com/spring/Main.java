@@ -9,8 +9,9 @@ public class Main {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
         //Vehicle veh = context.getBean(Vehicle.class);  //NoUniqueBeanDefinitionException
-        Vehicle vehOne = context.getBean(Vehicle.class); // This part solved problem with definition bean because we used name's bean
-        System.out.println("Primary Vehicle name from Spring Context is: " + vehOne.getName());
+        Vehicle vehicle = context.getBean(Vehicle.class); // This part solved problem with definition bean because we used name's bean
+        System.out.println("Primary Vehicle name from Spring Context is: " + vehicle.getName());
+        vehicle.sayHello();
 
     }
 }

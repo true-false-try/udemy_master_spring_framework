@@ -1,31 +1,10 @@
 package com.spring.config;
 
-import com.spring.model.Vehicle;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "com.spring.model")
 public class ProjectConfig {
 
-    @Bean(name = "audiVehicle")
-    Vehicle vehicleOne() {
-        var veh = new Vehicle();
-        veh.setName("Audi");
-        return veh;
-    }
-    @Primary
-    @Bean(value = "hondaVehicle")
-    Vehicle vehicleTwo() {
-        var veh = new Vehicle();
-        veh.setName("Honda");
-        return veh;
-    }
-
-    @Bean("bmwVehicle")
-    Vehicle vehicleThree() {
-        var veh = new Vehicle();
-        veh.setName("BMW");
-        return veh;
-    }
 }
