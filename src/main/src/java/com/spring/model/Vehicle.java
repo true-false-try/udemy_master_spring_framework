@@ -1,10 +1,5 @@
 package com.spring.model;
 
-import org.springframework.stereotype.Component;
-
-import javax.annotation.PostConstruct;
-
-@Component
 public class Vehicle {
     private String name;
 
@@ -15,14 +10,10 @@ public class Vehicle {
         this.name = name;
     }
 
-    @PostConstruct
-    public void initializationBeanName() {
-        this.name = "Honda";
-    }
-
-    public void sayHello() {
-        System.out.println(
-                "Printing Hello from Component Vehicle Bean"
-        );
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                '}';
     }
 }
