@@ -1,7 +1,10 @@
 package com.spring.model;
 
+import org.springframework.stereotype.Component;
+
+
 public class Vehicle {
-    private String name;
+    private String name = "Toyota";
 
     public String getName() {
         return this.name;
