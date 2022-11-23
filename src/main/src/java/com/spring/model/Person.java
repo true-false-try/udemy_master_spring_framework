@@ -8,7 +8,12 @@ public class Person {
 
     private String name = "Lucy";
 
-    private Vehicle vehicle;
+    private final Vehicle vehicle;
+
+    @Autowired
+    public Person(Vehicle vehicle) {
+        this.vehicle = vehicle;
+    }
 
     public String getName() {
         return name;
@@ -20,11 +25,6 @@ public class Person {
 
     public Vehicle getVehicle() {
         return vehicle;
-    }
-
-    @Autowired
-    public void setVehicle(Vehicle vehicle) {
-        this.vehicle = vehicle;
     }
 
 
