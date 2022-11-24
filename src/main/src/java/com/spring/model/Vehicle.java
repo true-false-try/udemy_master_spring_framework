@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Vehicle {
-    private String name = "Toyota";
+    private String name;
 
     public String getName() {
         return this.name;
