@@ -1,20 +1,26 @@
 package com.spring;
 
 import com.spring.config.ProjectConfig;
-import com.spring.model.Person;
-import com.spring.model.Vehicle;
+import com.spring.models.Person;
+import com.spring.models.Vehicle;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
+        String[] persons = context.getBeanNamesForType(Person.class);
         Person person = context.getBean(Person.class);
+
+        String[] names = context.getBeanNamesForType(Vehicle.class);
         Vehicle vehicle = context.getBean(Vehicle.class);
 
-        System.out.println("Person name from Spring Context is: " + person.getName());
-        System.out.println("Vehicle name from Spring Context is: " + vehicle.getName());
-        System.out.println("Vehicle that Person own is: " + person.getVehicle());
+        //vehicle.getVehicleService();
+
+        person.getVehicle().getVehicleService();
+
+
+
 
 
 

@@ -1,10 +1,10 @@
-package com.spring.model;
+package com.spring.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("personBean")
 public class Person {
 
     private String name = "Lucy";
@@ -12,7 +12,7 @@ public class Person {
     private final Vehicle vehicle;
 
     @Autowired
-    public Person(@Qualifier("audi") Vehicle vehicle) {
+    public Person(Vehicle vehicle) {
         this.vehicle = vehicle;
     }
 
