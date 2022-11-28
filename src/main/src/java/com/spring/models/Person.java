@@ -1,10 +1,11 @@
 package com.spring.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component("personBean")
+@Lazy
 public class Person {
 
     private String name = "Lucy";
@@ -13,6 +14,7 @@ public class Person {
 
     @Autowired
     public Person(Vehicle vehicle) {
+        System.out.println("Person bean created by Spring");
         this.vehicle = vehicle;
     }
 
