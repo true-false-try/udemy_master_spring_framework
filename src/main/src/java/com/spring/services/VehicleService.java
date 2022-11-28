@@ -3,9 +3,12 @@ package com.spring.services;
 import com.spring.interfaces.Speakers;
 import com.spring.interfaces.Tyres;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class VehicleService {
     public final Speakers speakers;
     private final Tyres tyres;
