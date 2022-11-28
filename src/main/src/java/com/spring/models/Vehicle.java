@@ -14,11 +14,6 @@ public class Vehicle {
         this.vehicleService = vehicleService;
     }
 
-    public void getVehicleService() {
-        vehicleService.playMusic();
-        vehicleService.moveVehicle();
-    }
-
     public String getName() {
         return this.name;
     }

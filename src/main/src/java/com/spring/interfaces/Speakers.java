@@ -1,5 +1,8 @@
 package com.spring.interfaces;
 
+import com.spring.models.Song;
+
 public interface Speakers {
-    public String makeSound();
+
+     String makeSound(Song song);
 }
