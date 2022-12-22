@@ -1,18 +1,18 @@
 package com.spring.config;
 
-import com.spring.models.Vehicle;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 
 @Configuration
 @ComponentScan(basePackages = {
         "com.spring.implementation",
-        "com.spring.services"
+        "com.spring.services",
+        "com.spring.models"
 })
-@ComponentScan("com.spring.models")
+@EnableAspectJAutoProxy
 public class ProjectConfig {
 
 }
+

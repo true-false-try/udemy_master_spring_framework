@@ -18,8 +18,8 @@ public class Main {
         song.setSingerName("Taylor Swift");
         boolean vehicleStarted = true;
 
-        String moveVehicleStatus = vehicleServices.moveVehicle(vehicleStarted);
         String playMusicStatus = vehicleServices.playMusic(vehicleStarted, song);
+        String moveVehicleStatus = vehicleServices.moveVehicle(vehicleStarted);
         String applyBrakeStatus = vehicleServices.applyBreak(vehicleStarted);
 
 

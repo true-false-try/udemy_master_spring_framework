@@ -24,65 +24,55 @@ public class VehicleService {
     }
 
     public String playMusic(boolean vehicleStarted, Song song) {
-        Instant start = Instant.now();
-        log.info("method execution start");
+        /*Instant start = Instant.now();
+        log.info("method execution start");*/
         String music = null;
-        if (!vehicleStarted) {
+        if (vehicleStarted) {
             music = speakers.makeSound(song);
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
         }
-        log.info("method execution end");
+        /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
-        log.info("Time took to execute the method " + timeElapsed);
+        log.info("Time took to execute the method " + timeElapsed);*/
 
         return music;
     }
 
     public String moveVehicle(boolean vehicleStarted) {
-        Instant start = Instant.now();
-        log.info("method execution start");
+        /*Instant start = Instant.now();
+        log.info("method execution start");*/
         String status = null;
         if (vehicleStarted) {
             status = tyres.stop();
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
         }
-        log.info("method execution end");
+        /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
-        log.info("Time took to execute the method " + timeElapsed);
+        log.info("Time took to execute the method " + timeElapsed);*/
 
         return status;
 
     }
 
     public String applyBreak(boolean vehicleStated) {
-        Instant start = Instant.now();
-        log.info("method execution start");
+        /*Instant start = Instant.now();
+        log.info("method execution start");*/
         String status = null;
         if (vehicleStated) {
             status = tyres.rotate();
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
         }
-        log.info("method execution end");
+        /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
-        log.info("Time took to execute the method " + timeElapsed);
+        log.info("Time took to execute the method " + timeElapsed);*/
 
         return status;
     }
-
-    public Speakers getSpeakers() {
-        return speakers;
-    }
-
-
-    public Tyres getTyres() {
-        return tyres;
-    }
-
 
 }
