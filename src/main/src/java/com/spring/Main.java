@@ -3,9 +3,7 @@ package com.spring;
 import com.spring.config.ProjectConfig;
 import com.spring.models.Song;
 import com.spring.services.VehicleService;
-import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 
 public class Main {
     public static void main(String[] args) {
