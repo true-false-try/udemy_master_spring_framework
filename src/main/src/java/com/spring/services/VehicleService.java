@@ -26,53 +26,53 @@ public class VehicleService {
     public String playMusic(boolean vehicleStarted, Song song) {
         /*Instant start = Instant.now();
         log.info("method execution start");*/
-        String music = null;
+        /*String music = null;
         if (vehicleStarted) {
             music = speakers.makeSound(song);
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
-        }
+        }*/
         /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         log.info("Time took to execute the method " + timeElapsed);*/
 
-        return music;
+        return speakers.makeSound(song);
     }
 
     public String moveVehicle(boolean vehicleStarted) {
         /*Instant start = Instant.now();
         log.info("method execution start");*/
-        String status = null;
+        /*String status = null;
         if (vehicleStarted) {
             status = tyres.stop();
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
-        }
+        }*/
         /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         log.info("Time took to execute the method " + timeElapsed);*/
 
-        return status;
+        return tyres.stop();
 
     }
 
     public String applyBreak(boolean vehicleStated) {
         /*Instant start = Instant.now();
         log.info("method execution start");*/
-        String status = null;
+       /* String status = null;
         if (vehicleStated) {
             status = tyres.rotate();
         } else {
             log.log(Level.SEVERE, "Vehicle not started perform the operation");
-        }
+        }*/
         /*log.info("method execution end");
         Instant finish = Instant.now();
         long timeElapsed = Duration.between(start, finish).toMillis();
         log.info("Time took to execute the method " + timeElapsed);*/
 
-        return status;
+        return tyres.stop();
     }
 
 }
